@@ -446,7 +446,9 @@ ul {
     display: none;
     align-items: flex-start;
     justify-content: center;
-    padding: 130px 20px 40px;
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: rgba(39, 74, 56, 0.88);
 }
 
@@ -457,6 +459,9 @@ ul {
 .search-overlay-content {
     position: relative;
     width: min(700px, 100%);
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 35px;
     background: var(--ivory);
     box-shadow: var(--shadow);
@@ -494,6 +499,7 @@ ul {
 
 #search-results {
     margin-top: 20px;
+    overflow-wrap: anywhere;
 }
 
 
@@ -1347,7 +1353,12 @@ opacity: 1;
     align-items: center;
     justify-content: center;
     padding: 25px;
-    background: rgba(24, 32, 25, 0.75);
+    /* background: rgba(24, 32, 25, 0.75); */
+    background-color: #315C45!important;
+    color: #FFFFFF!important;
+    border: 1px solid #315C45!important;
+    opacity: 1!important;
+    visibility: visible!important;
 }
 
 #quick-view-modal.active {
@@ -1840,7 +1851,7 @@ select:focus-visible {
 .quick-view-box p {
     margin: 0;
     font-size: 15px;
-    color: #555;
+    color: #4B4B45;
 }
 
 .quick-view-close {
@@ -1899,19 +1910,25 @@ select:focus-visible {
     font-weight: 500;
 }
 .quick-view-cart {
-    background: #777;
-    color: #111111;
-    border: 1px solid #111111;
+    /* background: var(--green); */
+    background-color: #315C45 !important;
+    color: #FFFFFF;
+    border: 1px solid #315C45!important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    border-radius: 12px;
     padding: 12px 28px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .quick-view-cart:hover {
-     background: #c9a227;
-    border-color: #111111;
+    background: #B59B7A;
+    color: #FFFFFF;
+    border-color: #B59B7A;
     transform: translateY(-2px);
 }
 body.dark-mode {
@@ -2170,4 +2187,3 @@ button.search-toggle i.fa-solid.fa-magnifying-glass {
     color: var(--green);
     cursor: pointer;
 }
-   
