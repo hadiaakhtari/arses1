@@ -421,28 +421,7 @@ if (themeToggle) {
 
     updateThemeIcon();
 }
-const wishlistToggle = document.getElementById("wishlist-toggle");
-const wishlistCount = document.querySelector(".wishlist-count");
 
-let wishlistNumber = Number(localStorage.getItem("arsesWishlist")) || 0;
-
-if (wishlistCount) {
-    wishlistCount.textContent = wishlistNumber;
-}
-
-if (wishlistToggle) {
-    wishlistToggle.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        wishlistNumber++;
-
-        if (wishlistCount) {
-            wishlistCount.textContent = wishlistNumber;
-        }
-
-        localStorage.setItem("arsesWishlist", wishlistNumber);
-    });
-}
 
 /* ARSES — Close Shopping Cart */
 document.addEventListener("DOMContentLoaded", function () {
