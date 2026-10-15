@@ -2187,3 +2187,39 @@ button.search-toggle i.fa-solid.fa-magnifying-glass {
     color: var(--green);
     cursor: pointer;
 }
+
+
+
+body.dark-mode .arses-quick-view .quick-view-box {
+    background-color: #222923 !important;
+    color: #F6F5EF !important;
+}
+
+body.dark-mode .arses-quick-view .quick-view-box h2 {
+    color: #F6F5EF !important;
+}
+
+body.dark-mode .arses-quick-view .quick-view-box p {
+    color: #E0DED5 !important;
+}
+
+body.dark-mode .arses-quick-view .quick-view-cart {
+    background-color: #B59B7A !important;
+    color: #171B18 !important;
+    border-color: #B59B7A !important;
+}
+
+body.dark-mode .feature-card {
+    background-color: #222923 !important;
+    color: #F6F5EF !important;
+}
+
+body.dark-mode .feature-card h3 {
+    color: #F6F5EF !important;
+}
+
+body.dark-mode .feature-card p {
+    color: #D8D9D2 !important;
+}
+
+

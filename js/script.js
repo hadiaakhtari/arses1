@@ -221,12 +221,13 @@ if (!searchButton ||!searchOverlay || !searchInput||!searchResults){
 
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 const cartCount = document.querySelector(".cart-count");
+let cartNumber = 0;
 
-let cartNumber = Number(localStorage.getItem("arsesCart")) || 0;
 if (cartCount) {
-    cartCount.textContent = cartNumber;
+    cartCount.textContent = 0;
 }
 
+localStorage.setItem("arsesCart", 0);
 addToCartButtons.forEach(function (button) {
 
     button.addEventListener("click", function () {
@@ -568,7 +569,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     image: image ? image.getAttribute("src") : ""
                 });
             }
-
+if (wishlistCount) {
+    wishlistCount.textContent = wishlist.length;
+}
             saveWishlist();
             updateHeartButtons();
             renderWishlist();
